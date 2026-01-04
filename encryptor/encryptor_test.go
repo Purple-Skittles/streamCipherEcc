@@ -118,7 +118,10 @@ func TestGetSharedSecret(t *testing.T) {
 func TestEncrypt(t *testing.T) {
 	t.Parallel()
 	priv, _ := GenerateKeyPair()
-	sharedSecret, _ := GetSharedSecret(priv, serverPubKey)
+	sharedSecret, err := GetSharedSecret(priv, serverPubKey)
+	if err != nil {
+		t.Errorf("failed to get shared secret: %v", err)
+	}
 	plaintext := []byte("example plaintext")
 	ciphertext, err := Encrypt(sharedSecret, plaintext)
 	if err != nil {
