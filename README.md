@@ -27,8 +27,8 @@ package main
 import (
     "fmt"
     "log"
-	  "github.com/Purple-Skittles/streamCipherEcc/encryptor"
-	  "github.com/Purple-Skittles/streamCipherEcc/decryptor"
+    "github.com/Purple-Skittles/streamCipherEcc/encryptor"
+    "github.com/Purple-Skittles/streamCipherEcc/decryptor"
 )
 
 func main() {
@@ -72,7 +72,7 @@ package main
 import (
     "embed"
     "log"
-	  "github.com/Purple-Skittles/streamCipherEcc/encryptor"
+    "github.com/Purple-Skittles/streamCipherEcc/encryptor"
 )
 
 //go:embed keys/*
